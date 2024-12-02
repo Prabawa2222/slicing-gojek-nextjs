@@ -3,10 +3,22 @@ import React, { useState } from "react";
 import Card from "../ui/Card";
 import Image from "next/image";
 
+interface Slide {
+  src: string;
+  title: string;
+  description: string;
+  bgColor: string;
+}
+
+interface CardComponentProps {
+  slide: Slide;
+  isMobile: boolean;
+}
+
 const ScaleSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const slides: Slide[] = [
     {
       src: "/assets/scale-1.png",
       title: "190 juta+",
@@ -42,7 +54,7 @@ const ScaleSection = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  const CardComponent = ({ slide, isMobile }: any) => (
+  const CardComponent: React.FC<CardComponentProps> = ({ slide, isMobile }) => (
     <Card
       className={`w-[400px] lg:w-[200px] h-[250px] flex flex-col items-center shadow-lg rounded-3xl justify-around px-5 
         bg-[${slide.bgColor}]

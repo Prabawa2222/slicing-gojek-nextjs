@@ -2,7 +2,6 @@ import CTASection from "@/components/sections/CTASection";
 import HeroSection from "@/components/sections/HeroSection";
 import MarkSection from "@/components/sections/MarkSection";
 import ScaleSection from "@/components/sections/ScaleSection";
-import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
