@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
 
 const maisonNeueBold = localFont({
   src: "./fonts/MaisonNeueBold.woff",
@@ -15,6 +16,16 @@ const maisonNeueBook = localFont({
 const maisonNeueDemi = localFont({
   src: "./fonts/MaisonNeueDemi.woff",
   variable: "--font-maison-neue-demi",
+});
+
+const maisonNeueExtBold = localFont({
+  src: "./fonts/MaisonNeueExtendedBold.woff",
+  variable: "--font-maison-neue-extended-bold",
+});
+
+const maisonNeueXtraBold = localFont({
+  src: "./fonts/MaisonNeueExtendedExtraBold.woff",
+  variable: "--font-maison-neue-extended-extra-bold",
 });
 
 export const metadata: Metadata = {
@@ -33,8 +44,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${maisonNeueBold.variable} ${maisonNeueBook.variable} ${maisonNeueDemi.variable} antialiased`}
+        className={`${maisonNeueBold.variable} ${maisonNeueBook.variable} ${maisonNeueDemi.variable} ${maisonNeueExtBold.variable} ${maisonNeueXtraBold.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

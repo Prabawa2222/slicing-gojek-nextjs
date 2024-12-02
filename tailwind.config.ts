@@ -10,7 +10,14 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        green: "var(--green)",
+      },
+      fontFamily: {
+        MaisonNeueBold: ['var(--font-maison-neue-bold)', 'sans-serif'],
+        MaisonNeueBook: ['var(--font-maison-neue-book)', 'sans-serif'],
+        MaisonNeueDemi: ['var(--font-maison-neue-demi)', 'sans-serif'],
+        MaisonNeueExtendedBold: ['var(--font-maison-neue-extended-bold)', 'sans-serif'],
+        MaisonNeueExtendedExtraBold: ['var(--font-maison-neue-extended-extra-bold)', 'sans-serif'],
       },
     },
   },
