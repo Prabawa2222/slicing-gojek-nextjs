@@ -54,7 +54,7 @@ const ScaleSection = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  const CardComponent: React.FC<CardComponentProps> = ({ slide, isMobile }) => (
+  const CardComponent: React.FC<CardComponentProps> = ({ slide }) => (
     <Card
       className={`w-[400px] lg:w-[200px] h-[250px] flex flex-col items-center shadow-lg rounded-3xl justify-around px-5 
         bg-[${slide.bgColor}]
